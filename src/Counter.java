@@ -109,6 +109,7 @@ public class Counter extends JFrame implements ActionListener {
             if (seconds==0 && minutes==0 && hours==0){
                 alert.setText("END OF TIME  (reset timer)");
                 // play an audio
+                //change the file path to its path in your computer
                 File file = new File("/home/youssef/IdeaProjects/CountDown/src/aaa.wav");
                 try {
                     AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
