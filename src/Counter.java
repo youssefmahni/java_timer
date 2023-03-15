@@ -110,7 +110,6 @@ public class Counter extends JFrame implements ActionListener {
                 alert.setText("END OF TIME  (reset timer)");
 //              getting the audio
                 String audioPath = System.getProperty("user.dir")+"/src/aaa.wav";
-                System.out.println(audioPath);
                 File file = new File(audioPath);
                 try {
                     AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
@@ -190,6 +189,8 @@ public class Counter extends JFrame implements ActionListener {
         sComboBox.setSelectedIndex(0);
         mComboBox.setSelectedIndex(0);
         hComboBox.setSelectedIndex(0);
-        clip.stop();
+        try{
+            clip.stop();
+        } catch (Exception ignored){}
     }
 }
